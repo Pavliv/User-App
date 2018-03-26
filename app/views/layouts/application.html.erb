@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UserApp</title>
+    <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class="navbar-text pull-right">
+    <% if user_signed_in? %>
+      <span>Logged in as <strong><%= current_user.email %></strong></span>
+      <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-dark" %>
+      <%= link_to "Show profile", user_path(current_user), class: "btn btn-outline-dark" %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-dark" %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-dark" %>
+      <%= link_to "Login", new_user_session_path, class: "btn btn-outline-dark" %>
+    <% end %>
+    </p>
+    <div class="clearfix"></div>
+    <%= yield %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+  padding: 0 80px;
+}
+a:hover {
+  text-decoration: none;
+}
+.table {
+  margin-top: 50px;
+}
+.btn {
+  border-radius: 0;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn-outline-dark {
+  width: 100px;
+  border: 1px solid #444;
+}
+.btn-outline-primary {
+  border: 1px solid #007bff;
+  width: 150px;
+  margin-bottom: 10px;
+}
+.btn-outline-dark:hover {
+  background-color: #212529;
+}
+.btn-outline-danger {
+  width: 150px;
+  border: 1px solid #dc3545;
+}
+.edit_user, .edit_header {
+  margin-left: 30%;
+}
+.form-control {
+  width: 350px;
+}
+.cancel_account {
+  margin: 0 30% 5%;
+}
+.login_form {
+  margin-left: 30%;
+
+  h2 {
+    margin-bottom: 35px;
+  }
+}
