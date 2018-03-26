@@ -23,17 +23,23 @@ a:hover {
 .btn-outline-dark {
   width: 100px;
   border: 1px solid #444;
+
+  &hover {
+  background-color: #212529;
+  }
 }
 .btn-outline-primary {
   border: 1px solid #007bff;
   width: 150px;
   margin-bottom: 10px;
 }
-.btn-outline-dark:hover {
-  background-color: #212529;
+.btn-outline-warning:hover {
+  color: #fff;
 }
 .btn-outline-danger {
   width: 150px;
+}
+.btn_red {
   border: 1px solid #dc3545;
 }
 .edit_user, .edit_header {
